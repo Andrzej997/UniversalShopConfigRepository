@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: shop-service
+  http:
+    multipart:
+      max-file-size: 25600MB
+      max-request-size: 25600MB
+server:
+  port: 8080
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false

@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      serviceId: config-server
+      discovery:
+        enabled: true
+      uri: ${vcap.services.${PREFIX:}config-server.credentials.uri:http://${PREFIX:}${config-server.${application.domain:cfapps.io}}}
+      fail-fast: true

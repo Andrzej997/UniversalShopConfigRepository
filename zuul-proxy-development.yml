@@ -1,0 +1,26 @@
+eureka:
+  instance:
+    hostname: zuul-proxy
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    preferIpAddress: true
+    nonSecurePort: ${server.port}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    eureka-connection-idle-timeout-seconds: 6000
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  ignoredServices: "*"
+  routes:
+    shop-service:
+      path: /shop/**
+      serviceId: shop-service
+      url: http://localhost:9000/
+spring:
+  rabbitmq:
+    host: localhost

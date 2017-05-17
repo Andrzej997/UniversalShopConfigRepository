@@ -1,3 +1,13 @@
 info:
   description: Streamer config
   url: https://github.com/Andrzej997/Streamer
+ribbon:
+  serverListRefreshInterval: 1000
+  maxAutoRetries: 1
+  maxAutoRetriesNextServer: 1
+  ServerListRefreshInterval: 1000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 1
+spring:
+  rabbitmq:
+    port: 5672

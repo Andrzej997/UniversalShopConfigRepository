@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: hystrix-dashboard-monitor
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+server:
+  port: 7979

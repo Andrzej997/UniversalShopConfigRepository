@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: turbine-server
+info:
+  component: Turbine
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+server:
+  port: 8989
+management:
+  port: 8990
+logging:
+  level:
+    root: WARN
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud.config.client.ConfigServicePropertySourceLocator: INFO
+    org.springframework.retry.support.RetryTemplate: DEBUG
+    org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO
+    org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer: INFO

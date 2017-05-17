@@ -1,0 +1,23 @@
+eureka:
+  instance:
+    hostname: ${PREFIX:}${spring.application.name}.${application.domain:cfapps.io}
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    preferIpAddress: true
+    nonSecurePort: ${server.port}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    eureka-connection-idle-timeout-seconds: 6000
+    serviceUrl:
+      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
+zuul:
+  ignoredServices: "*"
+  routes:
+    shop-service:
+      path: /shop/**
+      serviceId: shop-service
+      url: http://shop-service:9000/
