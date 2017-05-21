@@ -9,9 +9,9 @@ endpoints:
   shutdown:
     enabled: true
 server:
-  port: 8989
+  port: 9197
 management:
-  port: 8990
+  port: 9190
 logging:
   level:
     root: WARN
@@ -20,3 +20,6 @@ logging:
     org.springframework.retry.support.RetryTemplate: DEBUG
     org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO
     org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer: INFO
+security:
+  basic:
+    enabled: false
