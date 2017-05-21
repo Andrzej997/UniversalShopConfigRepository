@@ -15,3 +15,8 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
+turbine:
+  stream:
+    port: 8989
+  amqp:
+    port: 9197
