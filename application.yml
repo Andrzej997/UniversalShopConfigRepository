@@ -8,6 +8,10 @@ ribbon:
   ServerListRefreshInterval: 1000
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 1
+#  connectTimeout: 100
+#  readTimeout: 10000
+#  ConnectTimeout: 100
+#  ReadTimeout: 3000
 spring:
   rabbitmq:
     port: 5672
@@ -31,35 +35,3 @@ hystrix:
           strategy: THREAD
           thread:
             timeoutInMilliseconds: 4000
-ribbon:
-
-# FelFelFel: 1000
-# capital or not capital, that is the question...
-
-  # Interval to refresh the server list from the source
-  serverListRefreshInterval: 1000
-
-  # Max number of retries on the same server (excluding the first try)
-  maxAutoRetries: 1
-
-  # Max number of next servers to retry (excluding the first server)
-  maxAutoRetriesNextServer: 1
-
-  # Interval to refresh the server list from the source
-  ServerListRefreshInterval: 1000
-
-  # Max number of retries on the same server (excluding the first try)
-  MaxAutoRetries: 1
-
-  # Max number of next servers to retry (excluding the first server)
-  MaxAutoRetriesNextServer: 1
-
-#
-#  # Connect timeout used by Apache HttpClient
-#  connectTimeout: 100
-#
-#  # Read timeout used by Apache HttpClient
-#  readTimeout: 10000
-#
-#  ConnectTimeout: 100
-#  ReadTimeout: 3000
