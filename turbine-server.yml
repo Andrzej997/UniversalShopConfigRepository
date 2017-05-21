@@ -8,10 +8,8 @@ endpoints:
     enabled: true
   shutdown:
     enabled: true
-server:
-  port: 9197
 management:
-  port: 9190
+  port: 8990
 logging:
   level:
     root: WARN
