@@ -1,0 +1,13 @@
+server:
+  contextPath: /spring-security-oauth-server
+  port: 8081
+spring:
+  application:
+    name: auth-server
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false

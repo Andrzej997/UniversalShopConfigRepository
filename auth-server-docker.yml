@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: none
+      use-new-id-generator-mappings: true
+    database: POSTGRESQL
+  datasource:
+    initialize: false
+    url: jdbc:postgresql://shopdb:5432/shop?currentSchema=shop_schema
+    username: sysadm
+    password: sysadm
+    driver-class-name: org.postgresql.Driver
+spring:
+  rabbitmq:
+    host: rabbitmq

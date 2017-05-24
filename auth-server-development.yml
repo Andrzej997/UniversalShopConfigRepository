@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: validate
+      use-new-id-generator-mappings: true
+    database: POSTGRESQL
+  datasource:
+    initialize: false
+    url: jdbc:postgresql://localhost:5432/shop?currentSchema=shop_schema
+    username: sysadm
+    password: sysadm
+    driver-class-name: org.postgresql.Driver
+server:
+  contextPath: /spring-security-oauth-server
+  port: 8081

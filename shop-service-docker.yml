@@ -8,7 +8,7 @@ spring:
     show_sql: false
   datasource:
     initialize: false
-    url: jdbc:postgresql://usersdb:5432/shop
+    url: jdbc:postgresql://shopdb:5432/shop
     username: sysadm
     password: sysadm
     driver-class-name: org.postgresql.Driver
@@ -32,3 +32,10 @@ eureka:
 spring:
   rabbitmq:
     host: rabbitmq
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://auth-server:8081/oauth/token_key
