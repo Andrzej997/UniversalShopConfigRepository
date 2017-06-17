@@ -5,6 +5,5 @@ spring:
       discovery:
         serviceId: config-server
       fail-fast: true
-spring:
   rabbitmq:
     host: rabbitmq
