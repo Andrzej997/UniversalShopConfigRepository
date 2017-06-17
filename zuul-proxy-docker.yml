@@ -24,3 +24,10 @@ zuul:
 spring:
   rabbitmq:
     host: rabbitmq
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://auth-server:8081/spring-security-oauth-server/user
+server:
+  ssl:
+    trust-store: truststore.jks

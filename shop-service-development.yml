@@ -10,8 +10,6 @@ spring:
     username: sysadm
     password: sysadm
     driver-class-name: org.postgresql.Driver
-server:
-  port: 9000
 eureka:
   instance:
     hostname: shop-service
@@ -29,9 +27,6 @@ spring:
   rabbitmq:
     host: localhost
 security:
-  basic:
-    enabled: false
   oauth2:
     resource:
-      jwt:
-        key-uri: http://localhost:8081/oauth/token_key
+      user-info-uri: http://localhost:8081/spring-security-oauth-server/user

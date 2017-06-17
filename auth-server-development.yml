@@ -11,6 +11,6 @@ spring:
     username: sysadm
     password: sysadm
     driver-class-name: org.postgresql.Driver
-server:
-  contextPath: /spring-security-oauth-server
-  port: 8081
+spring:
+  rabbitmq:
+    host: localhost

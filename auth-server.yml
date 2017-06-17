@@ -1,6 +1,10 @@
 server:
   contextPath: /spring-security-oauth-server
   port: 8081
+  ssl:
+    key-store: classpath:server.jks
+    key-store-password: password
+    key-password: password
 spring:
   application:
     name: auth-server

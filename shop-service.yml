@@ -42,6 +42,12 @@ encrypt:
 logging:
   file: log.txt
   level: error
-security:
-  basic:
+server:
+  port: 9000
+  ssl:
+    enabled: false
+    trust-store: src/main/resources/truststore.jks
+    trust-store-password: password
+management:
+  security:
     enabled: false
