@@ -4,7 +4,7 @@ spring:
       serviceId: config-server
       discovery:
         enabled: true
-      uri: ${vcap.services.${PREFIX:}config-server.credentials.uri:http://${PREFIX:}${config-server.${application.domain:cfapps.io}}}
+      uri: ${vcap.services.${PREFIX:}config-server.credentials.uri:https://${PREFIX:}${config-server.${application.domain:cfapps.io}}}
 eureka:
   instance:
     hostname: ${PREFIX:}${spring.application.name}.${application.domain:cfapps.io}
@@ -16,6 +16,6 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
+      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:https://${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
   server:
     enable-self-preservation: false

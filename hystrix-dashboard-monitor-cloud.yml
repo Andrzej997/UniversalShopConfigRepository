@@ -4,5 +4,5 @@ spring:
       serviceId: config-server
       discovery:
         enabled: true
-      uri: ${vcap.services.${PREFIX:}config-server.credentials.uri:http://${PREFIX:}${config-server.${application.domain:cfapps.io}}}
+      uri: ${vcap.services.${PREFIX:}config-server.credentials.uri:https://${PREFIX:}${config-server.${application.domain:cfapps.io}}}
       fail-fast: true

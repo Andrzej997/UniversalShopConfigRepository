@@ -13,11 +13,11 @@ eureka:
     initialInstanceInfoReplicationIntervalSeconds: 5
     eureka-connection-idle-timeout-seconds: 6000
     serviceUrl:
-      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
+      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:https://${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
 zuul:
   ignoredServices: "*"
   routes:
     shop-service:
       path: /shop/**
       serviceId: shop-service
-      url: http://shop-service:9000/
+      url: https://shop-service:9000/

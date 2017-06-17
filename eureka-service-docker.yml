@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      uri: http://config-server:8888
+      uri: https://config-server:8888
       discovery:
         serviceId: config-server
   rabbitmq:
@@ -16,4 +16,9 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://eureka-service:8761/eureka/
+      defaultZone: https://eureka-service:8761/eureka/
+server:
+  ssl:
+    key-store: truststore.jks
+    key-store-password: password
+    key-password: password

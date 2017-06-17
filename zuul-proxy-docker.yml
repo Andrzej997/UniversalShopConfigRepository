@@ -13,21 +13,21 @@ eureka:
     initialInstanceInfoReplicationIntervalSeconds: 5
     eureka-connection-idle-timeout-seconds: 6000
     serviceUrl:
-      defaultZone: http://eureka-service:8761/eureka/
+      defaultZone: https://eureka-service:8761/eureka/
 zuul:
   ignoredServices: "*"
   routes:
     shop-service:
       path: /shop/**
       serviceId: shop-service
-      url: http://shop-service:9000/
+      url: https://shop-service:9000/
 spring:
   rabbitmq:
     host: rabbitmq
 security:
   oauth2:
     resource:
-      user-info-uri: http://auth-server:8081/spring-security-oauth-server/user
+      user-info-uri: httpss://auth-server:8081/spring-security-oauth-server/user
 server:
   ssl:
     trust-store: truststore.jks

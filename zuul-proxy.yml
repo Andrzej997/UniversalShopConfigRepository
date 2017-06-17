@@ -11,7 +11,7 @@ server:
     key-store: classpath:server.jks
     key-store-password: password
     key-password: password
-    trust-store: src/main/resources/truststore.jks
+    trust-store: classpath:truststore.jks
     trust-store-password: password
 endpoints:
   restart:

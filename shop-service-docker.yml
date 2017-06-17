@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      uri: http://config-server:8888
+      uri: https://config-server:8888
       discovery:
         serviceId: config-server
   rabbitmq:
@@ -28,11 +28,11 @@ eureka:
     fetchRegistry: true
     eureka-connection-idle-timeout-seconds: 3000
     serviceUrl:
-      defaultZone: http://eureka-service:8761/eureka/
+      defaultZone: https://eureka-service:8761/eureka/
 security:
   oauth2:
     resource:
-      user-info-uri: http://auth-server:8081/spring-security-oauth-server/user
+      user-info-uri: https://auth-server:8081/spring-security-oauth-server/user
 server:
   ssl:
     trust-store: truststore.jks
