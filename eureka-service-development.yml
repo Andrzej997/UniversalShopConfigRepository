@@ -20,7 +20,10 @@ eureka:
   server:
     enable-self-preservation: false
 server:
+  port: 8761
   ssl:
-    key-store: classpath:truststore.jks
+    key-store: classpath:server.jks
     key-store-password: password
     key-password: password
+    trust-store-password: password
+    trust-store: classpath:truststore.jks

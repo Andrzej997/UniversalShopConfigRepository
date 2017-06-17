@@ -18,7 +18,10 @@ eureka:
     serviceUrl:
       defaultZone: https://eureka-service:8761/eureka/
 server:
+  port: 8761
   ssl:
-    key-store: truststore.jks
+    key-store: classpath:server.jks
     key-store-password: password
     key-password: password
+    trust-store-password: password
+    trust-store: classpath:truststore.jks
