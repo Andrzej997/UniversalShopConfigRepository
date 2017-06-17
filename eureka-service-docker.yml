@@ -4,6 +4,8 @@ spring:
       uri: http://config-server:8888
       discovery:
         serviceId: config-server
+  rabbitmq:
+    host: rabbitmq
 eureka:
   instance:
     prefer-ip-address: false
@@ -15,6 +17,3 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://eureka-service:8761/eureka/
-spring:
-  rabbitmq:
-    host: rabbitmq
