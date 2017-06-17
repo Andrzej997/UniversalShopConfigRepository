@@ -25,6 +25,6 @@ server:
     key-store: classpath:keystore.jks
     key-store-password: password
     key-alias: localhost
-    trust-store: truststore.jks
+    trust-store: classpath:truststore.jks
     trust-store-password: password
     client-auth: want
