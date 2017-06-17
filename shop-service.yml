@@ -45,8 +45,11 @@ logging:
 server:
   port: 9000
   ssl:
-    enabled: false
-    trust-store: src/main/resources/truststore.jks
+    key-store: classpath:keystore.jks
+    key-store-password: password
+    key-password: password
+    key-alias: localhost
+    trust-store: classpath:truststore.jks
     trust-store-password: password
 management:
   security:
