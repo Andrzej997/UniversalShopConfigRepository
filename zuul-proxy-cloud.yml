@@ -7,6 +7,7 @@ eureka:
     non-secure-port-enabled: false
     secure-port-enabled: true
     secure-port: ${server.port}
+    secureVirtualHostName: ${spring.application.name}
   client:
     registerWithEureka: true
     fetchRegistry: true
@@ -17,9 +18,9 @@ eureka:
     serviceUrl:
       defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:https://${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
 zuul:
+  ssl-hostname-validation-enabled: false
   ignoredServices: "*"
   routes:
     shop-service:
       path: /shop/**
       serviceId: shop-service
-      url: https://shop-service:9000/

@@ -17,3 +17,4 @@ eureka:
     non-secure-port-enabled: false
     secure-port-enabled: true
     secure-port: ${server.port}
+    secureVirtualHostName: ${spring.application.name}

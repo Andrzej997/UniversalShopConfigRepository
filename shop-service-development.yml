@@ -21,6 +21,7 @@ eureka:
     non-secure-port-enabled: false
     secure-port-enabled: true
     secure-port: ${server.port}
+    secureVirtualHostName: ${spring.application.name}
   client:
     eureka-connection-idle-timeout-seconds: 3000
     registerWithEureka: true

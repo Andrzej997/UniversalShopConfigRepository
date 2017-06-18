@@ -7,6 +7,7 @@ eureka:
      non-secure-port-enabled: false
      secure-port-enabled: true
      secure-port: ${server.port}
+     secureVirtualHostName: ${spring.application.name}
   client:
     registerWithEureka: true
     fetchRegistry: true
@@ -17,12 +18,12 @@ eureka:
     serviceUrl:
       defaultZone: https://eureka-service:8761/eureka/
 zuul:
+  ssl-hostname-validation-enabled: false
   ignoredServices: "*"
   routes:
     shop-service:
       path: /shop/**
       serviceId: shop-service
-      url: https://shop-service:9000/
 spring:
   rabbitmq:
     host: rabbitmq
