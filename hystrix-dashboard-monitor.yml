@@ -8,3 +8,9 @@ endpoints:
     enabled: true
 server:
   port: 7979
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: password
+    key-alias: localhost
+    trust-store: classpath:truststore.jks
+    trust-store-password: password

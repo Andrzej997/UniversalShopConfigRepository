@@ -18,3 +18,10 @@ spring:
 turbine:
   amqp:
     port: 8989
+server:
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: password
+    key-alias: localhost
+    trust-store: classpath:truststore.jks
+    trust-store-password: password

@@ -8,9 +8,9 @@ spring:
 server:
   port: 8080
   ssl:
-    key-store: classpath:server.jks
+    key-store: classpath:keystore.jks
     key-store-password: password
-    key-password: password
+    key-alias: localhost
     trust-store: classpath:truststore.jks
     trust-store-password: password
 endpoints:
