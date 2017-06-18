@@ -1,6 +1,6 @@
 info:
-  description: Streamer config
-  url: https://github.com/Andrzej997/Streamer
+  description: Shop backend config
+  url: https://github.com/Andrzej997/UniversalShop
 ribbon:
   serverListRefreshInterval: 1000
   maxAutoRetries: 1
