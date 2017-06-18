@@ -10,6 +10,9 @@ eureka:
     hostname: ${PREFIX:}${spring.application.name}.${application.domain:cfapps.io}
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
+    non-secure-port-enabled: false
+    secure-port-enabled: true
+    secure-port: ${server.port}
   client:
     registerWithEureka: false
     fetchRegistry: false

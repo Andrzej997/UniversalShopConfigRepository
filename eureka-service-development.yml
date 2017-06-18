@@ -12,6 +12,9 @@ eureka:
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
     prefer-ip-address: true
+    non-secure-port-enabled: false
+    secure-port-enabled: true
+    secure-port: ${server.port}
   client:
     registerWithEureka: false
     fetchRegistry: false
