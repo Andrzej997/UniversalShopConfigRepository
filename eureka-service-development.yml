@@ -6,6 +6,7 @@ spring:
         serviceId: config-server
   rabbitmq:
     host: localhost
+    port: 5672
 eureka:
   instance:
     hostname: eureka-service
@@ -22,12 +23,3 @@ eureka:
       defaultZone: https://localhost:8761/eureka/
   server:
     enable-self-preservation: false
-server:
-  port: 8761
-  ssl:
-    key-store: classpath:keystore.jks
-    key-store-password: password
-    key-alias: localhost
-    trust-store: classpath:truststore.jks
-    trust-store-password: password
-    client-auth: want

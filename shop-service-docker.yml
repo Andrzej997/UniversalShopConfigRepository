@@ -5,7 +5,8 @@ spring:
       discovery:
         serviceId: config-server
   rabbitmq:
-    host: rabbitmq
+    host: localhost
+    port: 5672
   jpa:
     show_sql: false
   datasource:

@@ -6,6 +6,7 @@ spring:
         serviceId: config-server
   rabbitmq:
     host: localhost
+    port: 5672
   datasource:
     initialize: false
     url: jdbc:postgresql://localhost:5432/shop

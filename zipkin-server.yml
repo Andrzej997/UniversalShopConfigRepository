@@ -1,12 +1,12 @@
 spring:
   application:
-    name: shop-service
+    name: zipkin-server
   http:
     multipart:
       max-file-size: 25600MB
       max-request-size: 25600MB
 server:
-  port: 8080
+  port: 9411
   ssl:
     key-store: classpath:keystore.jks
     key-store-password: password
@@ -23,5 +23,3 @@ endpoints:
 security:
   basic:
     enabled: false
-ribbon:
-  IsSecure: true

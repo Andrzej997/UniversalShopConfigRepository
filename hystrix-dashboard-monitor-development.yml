@@ -13,3 +13,4 @@ spring:
       uri: https://localhost:8888
   rabbitmq:
     host: localhost
+    port: 5672

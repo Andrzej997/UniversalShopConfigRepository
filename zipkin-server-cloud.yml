@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      uri: https://config-server:8888
+      uri: ${vcap.services.${PREFIX:}config-server.credentials.uri:https://${PREFIX:}${config-server.${application.domain:cfapps.io}}}
       discovery:
         serviceId: config-server
       fail-fast: true

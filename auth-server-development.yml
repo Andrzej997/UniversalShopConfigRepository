@@ -1,4 +1,9 @@
 spring:
+  cloud:
+    config:
+      uri: https://localhost:8888
+      discovery:
+        serviceId: config-server
   jpa:
     show_sql: true
     hibernate:
@@ -13,3 +18,4 @@ spring:
     driver-class-name: org.postgresql.Driver
   rabbitmq:
     host: localhost
+    port: 5672

@@ -3,7 +3,6 @@ spring:
     name: turbine-server
 info:
   component: Turbine
-PREFIX:
 endpoints:
   restart:
     enabled: true
