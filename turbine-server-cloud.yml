@@ -23,9 +23,6 @@ spring:
 server:
   port: 0 # Avoid collisions in the unknown CF djungle...
   ssl:
-    key-store: classpath:keystore.jks
-    key-store-password: password
-    key-alias: localhost
     trust-store: classpath:truststore.jks
     trust-store-password: password
 
